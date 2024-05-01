@@ -44,6 +44,6 @@ jobs:
           name: artifact
           path: ./build
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
         with:
           publish_dir: ./build
