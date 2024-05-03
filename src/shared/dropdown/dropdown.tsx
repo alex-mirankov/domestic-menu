@@ -12,7 +12,8 @@ import Chip from '@mui/material/Chip';
 export interface DropdownProps {
   list: { key: string; label: string }[];
   label: string;
-  onSelect?: (value: string, key?: string) => void;
+  value?: string[];
+  onSelect?: (value: string[], key?: string) => void;
 }
 
 const ITEM_HEIGHT = 36;
@@ -26,24 +27,16 @@ const MenuProps = {
   },
 };
 
-function Dropdown({ list, label, onSelect }: DropdownProps) {
-  const [resultValue, setResultValue] = React.useState<string[]>([]);
+function Dropdown({ list, label, onSelect, value }: DropdownProps) {
+  const [resultValue, setResultValue] = React.useState<string[]>(value || []);
 
   const handleChange = (event: SelectChangeEvent<typeof resultValue>) => {
     const {
       target: { value },
     } = event;
-    setResultValue(
-        typeof value === 'string' ? value.split(',') : value,
-    );
+    setResultValue(value as string[]);
     if (onSelect) {
-      if (typeof value !== 'string') {
-        const keys = value.map((v) => list.find(({ label }) => label === v)?.key);
-        onSelect(keys.join(','));
-        return;
-      }
-
-      onSelect(value);
+      onSelect(value as string[]);
     }
   };
 

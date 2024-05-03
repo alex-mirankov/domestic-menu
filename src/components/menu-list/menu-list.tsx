@@ -4,32 +4,54 @@ import {MENU} from "../../data/menu";
 import Filters from "../filters/filters";
 import React from "react";
 import {IFilters} from "../../models/filters.interface";
+import { getFromLocalStorage, setToLocalStorage } from '../../api/localStorage';
+import { IMenuItem, LIST_MAP } from '../../models/menu-item.interface';
 
 function MenuList() {
-    const [filters, setFilters] = React.useState<IFilters<string[]>>({ category: [], season: [], price: [], difficulty: [] });
+    if (!getFromLocalStorage('filters')) {
+        setToLocalStorage('filters', { category: [], season: [], price: [], difficulty: [] });
+    }
+    const predefinedFilters = {
+        category: [], season: [], price: [], difficulty: []
+    }
+    const filtersFormLocalStorage = getFromLocalStorage<IFilters>('filters');
+    for (let key in filtersFormLocalStorage) {
+        const filterValues = filtersFormLocalStorage[key];
+        if (!filterValues.length) continue;
+
+        predefinedFilters[key] = filterValues;
+    }
+
+    const [filters, setFilters] = React.useState<IFilters>(predefinedFilters);
 
     const mapFilters = (filter: IFilters) => {
-        const mappedFilters: IFilters<string[]> = {
+        const mappedFilters: IFilters = {
             category: [],
             season: [],
             price: [],
             difficulty: [],
         };
         for (let key in filter) {
-            mappedFilters[key as keyof IFilters] = filter[key as keyof IFilters].split(',');
+            mappedFilters[key] = filter[key];
         }
 
         setFilters(mappedFilters);
     }
 
 
-    const applyFilter = () => {
-        const validFilters = Object.keys(filters).filter((el) => filters[el as keyof IFilters].length && filters[el as keyof IFilters][0] !== '').map((f) => ({ key: f, value: filters[f as keyof IFilters] }));
+    const applyFilter = (): IMenuItem[] => {
+        const validFilters = Object.keys(filters).filter((el) => filters[el].length && filters[el][0] !== '').map((f) => ({ key: f, value: filters[f] }));
         if (!validFilters.length) return MENU;
 
+        const fn = (menu: IMenuItem, obj: { key: string; value: any; }): boolean => obj.value.map((v) => {
+            const list = LIST_MAP[obj.key];
+            const onlySelectedFromList = list.filter((l) => l.label === v);
+            const onlyKeys = onlySelectedFromList.map(({ key }) => key);
+            return onlyKeys.includes(menu[obj.key]);
+        }).some(Boolean);
         let filteredMenu = [...MENU];
         for (let obj of validFilters) {
-            filteredMenu = filteredMenu.filter((menu) => obj.value.includes(menu[obj.key as keyof IFilters]));
+            filteredMenu = filteredMenu.filter((el) => fn(el, obj));
         }
         return filteredMenu;
     }

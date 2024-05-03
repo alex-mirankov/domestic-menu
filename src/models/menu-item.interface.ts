@@ -59,7 +59,7 @@ export const PRICE_MAP: Map<string, IColoredLabel> = new Map([
     ['3', { color: 'red', label: '$$$' }],
 ]);
 
-export const CategoryFilter = [
+export const CATEGORY_FILTER = [
     { key: Category.SALAD, label: 'Салаты' },
     { key: Category.SOUP, label:  'Супы' },
     { key: Category.MAIN_COURSE, label:  'Основные блюда' },
@@ -68,7 +68,7 @@ export const CategoryFilter = [
     { key: Category.SIDE_DISH, label:  'Гарниры' },
 ];
 
-export const SeasonFilter = [
+export const SEASON_FILTER = [
     { key: Season.WINTER, label: 'Зима' },
     { key: Season.SPRING, label: 'Весна' },
     { key: Season.SUMMER, label: 'Лето' },
@@ -76,14 +76,21 @@ export const SeasonFilter = [
     { key: Season.ALL_SEASONS, label: 'Все сезоны' },
 ];
 
-export const PriceFilter = [
+export const PRICE_FILTER = [
     { key: '1', label: '$' },
     { key: '2', label: '$$' },
     { key: '3', label: '$$$' },
 ];
 
-export const DifficultyFilter = [
+export const DIFFICULTY_FILTER = [
     { key: Difficulty.EASY, label: 'Легко' },
     { key: Difficulty.MEDIUM, label: 'Средне' },
     { key: Difficulty.HARD, label: 'Сложно' },
 ];
+
+export const LIST_MAP = {
+    category: CATEGORY_FILTER,
+    season: SEASON_FILTER,
+    price: PRICE_FILTER,
+    difficulty: DIFFICULTY_FILTER,
+}

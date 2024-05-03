@@ -1,6 +1,6 @@
-export interface IFilters<T = string> {
-    category: T;
-    season: T;
-    price: T;
-    difficulty: T;
+export interface IFilters {
+    category: string[];
+    season: string[];
+    price: string[];
+    difficulty: string[];
 }
