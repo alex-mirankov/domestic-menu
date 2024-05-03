@@ -5,4 +5,4 @@ import tomatoSoup from './tomato-soup.jpeg';
 export default {
     greekSalad,
     tomatoSoup,
-}
+};

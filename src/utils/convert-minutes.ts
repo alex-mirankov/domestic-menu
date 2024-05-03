@@ -3,4 +3,4 @@ export const convertMinutes = (minutes: number): string => {
     const restMinutes = minutes % 60;
 
     return `${hours ? `${hours} ч` : ''} ${restMinutes ? `${restMinutes} мин` : ''}`;
-}
+};

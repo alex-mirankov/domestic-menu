@@ -1,4 +1,4 @@
-import {IColoredLabel} from "./colored-label.interface";
+import { IColoredLabel } from './colored-label.interface';
 
 export interface IMenuItem {
     id: string;
@@ -61,11 +61,11 @@ export const PRICE_MAP: Map<string, IColoredLabel> = new Map([
 
 export const CATEGORY_FILTER = [
     { key: Category.SALAD, label: 'Салаты' },
-    { key: Category.SOUP, label:  'Супы' },
-    { key: Category.MAIN_COURSE, label:  'Основные блюда' },
-    { key: Category.DESSERT, label:  'Десерты' },
-    { key: Category.DRINK, label:  'Напитки' },
-    { key: Category.SIDE_DISH, label:  'Гарниры' },
+    { key: Category.SOUP, label: 'Супы' },
+    { key: Category.MAIN_COURSE, label: 'Основные блюда' },
+    { key: Category.DESSERT, label: 'Десерты' },
+    { key: Category.DRINK, label: 'Напитки' },
+    { key: Category.SIDE_DISH, label: 'Гарниры' },
 ];
 
 export const SEASON_FILTER = [
@@ -93,4 +93,4 @@ export const LIST_MAP = {
     season: SEASON_FILTER,
     price: PRICE_FILTER,
     difficulty: DIFFICULTY_FILTER,
-}
+};
