@@ -2,6 +2,7 @@ import {
     Category,
     Difficulty,
     IMenuItem,
+    Price,
     Season,
 } from '../models/menu-item.interface';
 import images from '../assets/images';
@@ -13,7 +14,7 @@ export const MENU: IMenuItem[] = [
         img: images.greekSalad,
         difficulty: Difficulty.EASY,
         preparationTime: 55,
-        price: '1',
+        price: Price.CHEAP,
         category: Category.SALAD,
         ingredients: [
             { name: 'Tomato', quantity: 2, unit: 'pcs' },
@@ -31,7 +32,7 @@ export const MENU: IMenuItem[] = [
         img: images.tomatoSoup,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 130,
-        price: '3',
+        price: Price.EXPENSIVE,
         category: Category.SOUP,
         ingredients: [
             { name: 'Tomato', quantity: 3, unit: 'pcs' },
@@ -41,6 +42,16 @@ export const MENU: IMenuItem[] = [
             { name: 'Olive Oil', quantity: 2, unit: 'tbsp' },
             { name: 'Salt', quantity: 1, unit: 'pinch' },
         ],
+        season: Season.ALL_SEASONS,
+    },
+    {
+        id: '3',
+        name: 'Оладьи',
+        img: images.oladies,
+        difficulty: Difficulty.MEDIUM,
+        preparationTime: 60,
+        price: Price.CHEAP,
+        category: Category.BREAKFAST,
         season: Season.ALL_SEASONS,
     },
 ];

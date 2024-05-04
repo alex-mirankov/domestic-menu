@@ -8,8 +8,8 @@ export interface IMenuItem {
     preparationTime: number;
     price: string;
     category: Category;
-    ingredients: IIngredient[];
     season: Season;
+    ingredients?: IIngredient[];
 }
 
 export enum Difficulty {
@@ -18,7 +18,14 @@ export enum Difficulty {
     HARD = 'hard',
 }
 
+export enum Price {
+    CHEAP = '1',
+    MID = '2',
+    EXPENSIVE = '3',
+}
+
 export enum Category {
+    BREAKFAST = 'breakfast',
     SALAD = 'salad',
     SOUP = 'soup',
     MAIN_COURSE = 'main course',
@@ -60,6 +67,7 @@ export const PRICE_MAP: Map<string, IColoredLabel> = new Map([
 ]);
 
 export const CATEGORY_FILTER = [
+    { key: Category.BREAKFAST, label: 'Завтраки' },
     { key: Category.SALAD, label: 'Салаты' },
     { key: Category.SOUP, label: 'Супы' },
     { key: Category.MAIN_COURSE, label: 'Основные блюда' },
