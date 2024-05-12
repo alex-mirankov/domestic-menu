@@ -32,6 +32,7 @@ export enum Category {
     DESSERT = 'dessert',
     DRINK = 'drink',
     SIDE_DISH = 'side dish',
+    AFTER_LUNCH = 'after lunch',
 }
 
 export enum Season {
@@ -74,6 +75,7 @@ export const CATEGORY_FILTER = [
     { key: Category.DESSERT, label: 'Десерты' },
     { key: Category.DRINK, label: 'Напитки' },
     { key: Category.SIDE_DISH, label: 'Гарниры' },
+    { key: Category.AFTER_LUNCH, label: 'Перекус' },
 ];
 
 export const SEASON_FILTER = [
