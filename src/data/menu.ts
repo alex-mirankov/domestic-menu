@@ -257,7 +257,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '24',
         name: 'Макароны',
-        img: images.fishSoup,
+        img: images.makaroni,
         difficulty: Difficulty.EASY,
         preparationTime: 20,
         price: Price.CHEAP,
@@ -267,7 +267,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '25',
         name: 'Макароны со сливками и грибами',
-        img: images.fishSoup,
+        img: images.pasta_mash,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 40,
         price: Price.MID,
@@ -277,7 +277,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '26',
         name: 'Карбонара',
-        img: images.fishSoup,
+        img: images.karbonara,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 30,
         price: Price.MID,
@@ -287,7 +287,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '27',
         name: 'Гречка',
-        img: images.fishSoup,
+        img: images.grecha,
         difficulty: Difficulty.EASY,
         preparationTime: 20,
         price: Price.CHEAP,
@@ -297,7 +297,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '28',
         name: 'Гречка с грибами',
-        img: images.fishSoup,
+        img: images.grecha_mush,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 40,
         price: Price.MID,
@@ -307,7 +307,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '29',
         name: 'Пюре',
-        img: images.fishSoup,
+        img: images.puree,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 70,
         price: Price.CHEAP,
@@ -317,7 +317,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '30',
         name: 'Запеченная картошка',
-        img: images.fishSoup,
+        img: images.roasted_potato,
         difficulty: Difficulty.EASY,
         preparationTime: 60,
         price: Price.CHEAP,
@@ -327,7 +327,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '31',
         name: 'Варенная картошка',
-        img: images.fishSoup,
+        img: images.boiled_potato,
         difficulty: Difficulty.EASY,
         preparationTime: 60,
         price: Price.CHEAP,
@@ -337,7 +337,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '32',
         name: 'Рис',
-        img: images.fishSoup,
+        img: images.ris,
         difficulty: Difficulty.EASY,
         preparationTime: 20,
         price: Price.CHEAP,
@@ -347,7 +347,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '33',
         name: 'Рис с овощами',
-        img: images.fishSoup,
+        img: images.ris_vegetables,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 40,
         price: Price.MID,
@@ -357,7 +357,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '34',
         name: 'Плов со свининой',
-        img: images.fishSoup,
+        img: images.plov,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 50,
         price: Price.EXPENSIVE,
@@ -367,7 +367,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '35',
         name: 'Вок (курица,перец,грибы,кукуруза)',
-        img: images.fishSoup,
+        img: images.vok,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 40,
         price: Price.EXPENSIVE,
@@ -377,7 +377,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '36',
         name: 'Котлеты',
-        img: images.fishSoup,
+        img: images.kotleti,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 40,
         price: Price.MID,
@@ -387,7 +387,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '37',
         name: 'Котлеты по-албански',
-        img: images.fishSoup,
+        img: images.kotleti_albanski,
         difficulty: Difficulty.MEDIUM,
         preparationTime: 60,
         price: Price.EXPENSIVE,
@@ -397,7 +397,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '38',
         name: 'Жаренная свинина',
-        img: images.fishSoup,
+        img: images.fried_pork,
         difficulty: Difficulty.EASY,
         preparationTime: 30,
         price: Price.EXPENSIVE,
@@ -407,7 +407,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '39',
         name: 'Мясо по-французски',
-        img: images.fishSoup,
+        img: images.french_meat,
         difficulty: Difficulty.HARD,
         preparationTime: 60,
         price: Price.EXPENSIVE,
@@ -417,7 +417,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '40',
         name: 'Кабачки с сыром и грибами',
-        img: images.fishSoup,
+        img: images.kabachki_chees,
         difficulty: Difficulty.HARD,
         preparationTime: 60,
         price: Price.EXPENSIVE,
@@ -427,7 +427,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '41',
         name: 'Грудка в листах',
-        img: images.fishSoup,
+        img: images.fried_chiken,
         difficulty: Difficulty.EASY,
         preparationTime: 120,
         price: Price.EXPENSIVE,
@@ -437,7 +437,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '42',
         name: 'Жаренная говядина',
-        img: images.fishSoup,
+        img: images.fried_beef,
         difficulty: Difficulty.EASY,
         preparationTime: 30,
         price: Price.EXPENSIVE,
@@ -447,7 +447,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '43',
         name: 'Ленивые голубцы',
-        img: images.fishSoup,
+        img: images.lazy_golub,
         difficulty: Difficulty.HARD,
         preparationTime: 80,
         price: Price.MID,
@@ -457,7 +457,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '44',
         name: 'Запеченная курица',
-        img: images.fishSoup,
+        img: images.roasted_chiken,
         difficulty: Difficulty.EASY,
         preparationTime: 70,
         price: Price.EXPENSIVE,
@@ -467,7 +467,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '45',
         name: 'Колбаски',
-        img: images.fishSoup,
+        img: images.kolbaski,
         difficulty: Difficulty.EASY,
         preparationTime: 70,
         price: Price.EXPENSIVE,
@@ -477,7 +477,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '46',
         name: 'Сосиски с макаронами',
-        img: images.fishSoup,
+        img: images.sosiski_pasta,
         difficulty: Difficulty.EASY,
         preparationTime: 70,
         price: Price.EXPENSIVE,
@@ -487,7 +487,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '47',
         name: 'Пельмени жаренные/варенные',
-        img: images.fishSoup,
+        img: images.pelmeni_fried,
         difficulty: Difficulty.EASY,
         preparationTime: 70,
         price: Price.EXPENSIVE,
@@ -497,7 +497,7 @@ export const MENU: IMenuItem[] = [
     {
         id: '48',
         name: 'Жаренная картошка',
-        img: images.fishSoup,
+        img: images.fried_potato,
         difficulty: Difficulty.EASY,
         preparationTime: 40,
         price: Price.CHEAP,
