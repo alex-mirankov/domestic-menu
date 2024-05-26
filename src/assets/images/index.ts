@@ -53,7 +53,7 @@ import fried_potato from './big_548315.jpg';
 import pelmeni_fried from './zharenie-pelmeni-1000х720.jpg-1000x667.jpg';
 import sosiski_pasta from './F-KrbK05q3aLk772bSJKn4rNWmf1G5V-.jpg';
 import kolbaski from './504.970.jpg';
-import roasted_chiken from './zapechennaya';
+import roasted_chiken from './kurica-babochka.jpg';
 import lazy_golub from './big_552326.jpg';
 import fried_beef from './jarenoe-myaso-s-ovoshchami-na-skovorode_1560077691_1_max.jpg';
 import fried_chiken from './3_1523581983_37cea.jpg';
